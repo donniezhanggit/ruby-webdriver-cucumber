@@ -1,5 +1,4 @@
 # Created by Viacheslav (Slava) Skryabin 01/01/2016
-require "em/pure_ruby"
 require "selenium-webdriver"
 require "selenium-cucumber"
 require "test/unit"
