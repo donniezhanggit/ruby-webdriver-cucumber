@@ -27,6 +27,8 @@ AfterConfiguration do
   chrome_options.add_argument("--disable-popup-blocking")
   chrome_options.add_argument("--disable-translate")
   chrome_options.add_argument("--dns-prefetch-disable")
+  # chrome_options.add_argument("--headless")
+  # chrome_options.add_argument("--window-size=1920,1080")
   if $driver.nil?
     $driver = Selenium::WebDriver.for(:chrome, detach: false, options: chrome_options)
     # below needed for browser to get to foreground
