@@ -13,6 +13,7 @@ AfterConfiguration do
   chrome_driver_path = "./drivers/chromedriver"
   firefox_driver_path = "./drivers/geckodriver"
   if Gem.win_platform?
+    # firefox support
     chrome_driver_path = "./drivers/chromedriver.exe"
     firefox_driver_path = "./drivers/geckodriver.exe"
   end
