@@ -11,6 +11,7 @@ include Test::Unit::Assertions
 # Will be executed before beginning of all Scenarios - after initial Cucumber configuration
 AfterConfiguration do
   chrome_driver_path = "./drivers/chromedriver"
+  firefox_driver_path = "./drivers/geckodriver"
   if Gem.win_platform?
     chrome_driver_path = "./drivers/chromedriver.exe"
   end
