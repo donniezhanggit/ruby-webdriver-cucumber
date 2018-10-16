@@ -14,6 +14,7 @@ AfterConfiguration do
   firefox_driver_path = "./drivers/geckodriver"
   if Gem.win_platform?
     chrome_driver_path = "./drivers/chromedriver.exe"
+    firefox_driver_path = "./drivers/geckodriver.exe"
   end
   Selenium::WebDriver::Chrome.driver_path = chrome_driver_path
   chrome_options = Selenium::WebDriver::Chrome::Options.new
@@ -26,6 +27,8 @@ AfterConfiguration do
   chrome_options.add_argument("--disable-popup-blocking")
   chrome_options.add_argument("--disable-translate")
   chrome_options.add_argument("--dns-prefetch-disable")
+  # chrome_options.add_argument("--headless")
+  # chrome_options.add_argument("--window-size=1920,1080")
   if $driver.nil?
     $driver = Selenium::WebDriver.for(:chrome, detach: false, options: chrome_options)
     # below needed for browser to get to foreground
