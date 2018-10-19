@@ -13,11 +13,11 @@ AfterConfiguration do
   chrome_driver_path = "./drivers/chromedriver"
   firefox_driver_path = "./drivers/geckodriver"
   if Gem.win_platform?
-    # firefox support
     chrome_driver_path = "./drivers/chromedriver.exe"
     firefox_driver_path = "./drivers/geckodriver.exe"
   end
   Selenium::WebDriver::Chrome.driver_path = chrome_driver_path
+  Selenium::WebDriver::Firefox.driver_path = firefox_driver_path
   chrome_options = Selenium::WebDriver::Chrome::Options.new
   chrome_options.add_argument("--start-maximized")
   chrome_options.add_argument("--disable-cache")
