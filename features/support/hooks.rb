@@ -5,6 +5,7 @@ require "selenium-cucumber"
 require "test/unit"
 require "time"
 require 'page-object'
+require 'em/pure_ruby'
 
 Test::Unit::AutoRunner.need_auto_run = false
 include Test::Unit::Assertions
