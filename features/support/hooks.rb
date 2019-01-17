@@ -1,11 +1,11 @@
 # Created by Viacheslav (Slava) Skryabin 01/01/2016
 require_relative 'test_context'
+require 'em/pure_ruby'
 require "selenium-webdriver"
 require "selenium-cucumber"
 require "test/unit"
 require "time"
 require 'page-object'
-require 'em/pure_ruby'
 
 Test::Unit::AutoRunner.need_auto_run = false
 include Test::Unit::Assertions
